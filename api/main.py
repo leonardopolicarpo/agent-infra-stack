@@ -23,6 +23,7 @@ app = FastAPI(
   description="Scalable multi-agent pipeline with persistent memory and observability.",
   version="0.1.0",
   lifespan=lifespan,
+  redirect_slashes=False,
 )
 
 app.add_middleware(

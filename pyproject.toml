@@ -6,9 +6,10 @@ readme = "README.md"
 requires-python = ">=3.10.13"
 dependencies = [
     "asyncpg>=0.31.0",
-    "celery>=5.6.3",
+    "celery[redis]>=5.6.3",
     "fastapi>=0.136.1",
     "httpx>=0.28.1",
     "pydantic>=2.13.3",
     "pydantic-settings>=2.14.0",
+    "uvicorn>=0.46.0",
 ]
