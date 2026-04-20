@@ -10,7 +10,7 @@
 Project structure, contracts and infrastructure baseline.
 
 - [x] Repository setup and README overview
-- [ ] Shared Pydantic schemas (API ↔ Worker contracts)
+- [x] Shared Pydantic schemas (API ↔ Worker contracts)
 - [ ] `docker-compose.yml` — Postgres, Redis, Qdrant, Langfuse, Flower
 - [ ] Postgres init schema (tasks table + triggers)
 - [ ] `.env.example` with all required variables
