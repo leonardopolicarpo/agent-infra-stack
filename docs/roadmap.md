@@ -5,7 +5,7 @@
 
 ---
 
-## Phase 1 — Foundation `[in progress]`
+## Phase 1 — Foundation
 
 Project structure, contracts and infrastructure baseline.
 
@@ -13,11 +13,11 @@ Project structure, contracts and infrastructure baseline.
 - [x] Shared Pydantic schemas (API ↔ Worker contracts)
 - [x] `docker-compose.yml` — Postgres, Redis, Qdrant, Langfuse, Flower
 - [x] Postgres init schema (tasks table + triggers)
-- [ ] `.env.example` with all required variables
+- [x] `.env.example` with all required variables
 
 ---
 
-## Phase 2 — API Gateway
+## Phase 2 — API Gateway `[in progress]`
 
 FastAPI service — task submission and status polling.
 
