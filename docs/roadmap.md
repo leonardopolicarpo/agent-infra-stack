@@ -21,8 +21,8 @@ Project structure, contracts and infrastructure baseline.
 
 FastAPI service — task submission and status polling.
 
-- [ ] `POST /task` — enqueue and return `task_id` immediately (202)
-- [ ] `GET /task/{id}` — return status + result
+- [x] `POST /task` — enqueue and return `task_id` immediately (202)
+- [x] `GET /task/{id}` — return status + result
 - [ ] `GET /health` — basic health check
 - [ ] Celery app configuration (broker, backend, serialization)
 - [ ] API Dockerfile
