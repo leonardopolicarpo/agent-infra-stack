@@ -12,7 +12,7 @@ Project structure, contracts and infrastructure baseline.
 - [x] Repository setup and README overview
 - [x] Shared Pydantic schemas (API ↔ Worker contracts)
 - [x] `docker-compose.yml` — Postgres, Redis, Qdrant, Langfuse, Flower
-- [ ] Postgres init schema (tasks table + triggers)
+- [x] Postgres init schema (tasks table + triggers)
 - [ ] `.env.example` with all required variables
 
 ---
@@ -72,6 +72,7 @@ Langfuse self-hosted integration.
 - [ ] Per-node trace: time, token count, model used
 - [ ] Router decision visible in traces
 - [ ] Iteration count tracked per task
+- [ ] Add `langfuse_trace_id` column to tasks table (migration)
 
 ---
 
