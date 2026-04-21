@@ -17,15 +17,15 @@ Project structure, contracts and infrastructure baseline.
 
 ---
 
-## Phase 2 — API Gateway `[in progress]`
+## Phase 2 — API Gateway
 
 FastAPI service — task submission and status polling.
 
 - [x] `POST /task` — enqueue and return `task_id` immediately (202)
 - [x] `GET /task/{id}` — return status + result
 - [x] `GET /health` — basic health check
-- [ ] Celery app configuration (broker, backend, serialization)
-- [ ] API Dockerfile
+- [x] Celery app configuration (broker, backend, serialization)
+- [x] API Dockerfile
 
 ---
 
