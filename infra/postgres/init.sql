@@ -1,3 +1,5 @@
+CREATE DATABASE langfuse_db;
+
 CREATE TABLE IF NOT EXISTS tasks (
   id          UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   status      TEXT NOT NULL DEFAULT 'pending',   -- pending | running | done | failed

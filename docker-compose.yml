@@ -49,40 +49,20 @@ services:
 
   # ─── Langfuse Server (Web UI & API) ──────────────────────────────
   langfuse:
-    image: langfuse/langfuse:3
+    image: langfuse/langfuse:2
     container_name: aas_langfuse
     restart: unless-stopped
     depends_on:
       postgres:
         condition: service_healthy
-      redis:
-        condition: service_healthy
     environment:
-      DATABASE_URL: postgresql://${POSTGRES_USER:-agent}:${POSTGRES_PASSWORD:-agent_pass}@postgres:5432/${POSTGRES_DB:-agent_db}
-      REDIS_URL: redis://redis:6379/0
+      DATABASE_URL: postgresql://${POSTGRES_USER:-agent}:${POSTGRES_PASSWORD:-agent_pass}@postgres:5432/langfuse_db
       NEXTAUTH_URL: http://localhost:3000
       NEXTAUTH_SECRET: ${LANGFUSE_SECRET:-supersecretkey_change_in_prod}
       SALT: ${LANGFUSE_SALT:-saltsaltsalt_change_in_prod}
       TELEMETRY_ENABLED: "false"
     ports:
       - "3000:3000"
-
-  # ─── Langfuse Worker ────────────────────
-  langfuse-worker:
-    image: langfuse/langfuse-worker:3
-    container_name: aas_langfuse_worker
-    restart: unless-stopped
-    depends_on:
-      postgres:
-        condition: service_healthy
-      redis:
-        condition: service_healthy
-    environment:
-      DATABASE_URL: postgresql://${POSTGRES_USER:-agent}:${POSTGRES_PASSWORD:-agent_pass}@postgres:5432/${POSTGRES_DB:-agent_db}
-      REDIS_URL: redis://redis:6379/0
-      NEXTAUTH_SECRET: ${LANGFUSE_SECRET:-supersecretkey_change_in_prod}
-      SALT: ${LANGFUSE_SALT:-saltsaltsalt_change_in_prod}
-      TELEMETRY_ENABLED: "false"
 
   # ─── Celery Flower (Monitor de filas) ───────────────────────────
   flower:

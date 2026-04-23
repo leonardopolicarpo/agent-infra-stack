@@ -29,7 +29,7 @@ FastAPI service — task submission and status polling.
 
 ---
 
-## Phase 3 — Worker Core
+## Phase 3 — Worker Core `[in progress]`
 
 Celery worker and LangGraph graph skeleton.
 
