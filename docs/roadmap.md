@@ -33,8 +33,8 @@ FastAPI service — task submission and status polling.
 
 Celery worker and LangGraph graph skeleton.
 
-- [ ] Celery task entry point (`run_agent`)
-- [ ] Task lifecycle: `pending → running → done/failed`
+- [x] Celery task entry point (`run_agent`)
+- [x] Task lifecycle: `pending → running → done/failed`
 - [ ] LangGraph graph definition (nodes + edges + loop logic)
 - [ ] Worker Dockerfile
 
