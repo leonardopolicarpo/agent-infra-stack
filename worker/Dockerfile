@@ -11,4 +11,7 @@ COPY shared/ ./shared/
 RUN pip install uv && uv sync --no-dev
 ENV PYTHONPATH=/app
 
+RUN useradd -m celeryuser && chown -R celeryuser:celeryuser /app
+USER celeryuser
+
 CMD [".venv/bin/celery", "-A", "worker.celery_app", "worker", "--loglevel=info"]

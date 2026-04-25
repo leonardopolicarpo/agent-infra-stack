@@ -36,7 +36,7 @@ Celery worker and LangGraph graph skeleton.
 - [x] Celery task entry point (`run_agent`)
 - [x] Task lifecycle: `pending → running → done/failed`
 - [ ] LangGraph graph definition (nodes + edges + loop logic)
-- [ ] Worker Dockerfile
+- [x] Worker Dockerfile
 
 ---
 
