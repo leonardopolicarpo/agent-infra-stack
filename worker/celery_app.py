@@ -5,6 +5,7 @@ celery_app = Celery(
   "agent_infra_stack",
   broker=settings.REDIS_URL,
   backend=settings.REDIS_URL,
+  include=["worker.tasks"]
 )
 
 celery_app.conf.update(
