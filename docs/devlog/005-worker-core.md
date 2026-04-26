@@ -73,6 +73,7 @@ arquivos de cache temporários (`__pycache__`) sem erro de permissão.
 
 ## Ciclo de vida da task
 
+```text
 [ Cliente ]
      │
      ▼
@@ -99,6 +100,7 @@ arquivos de cache temporários (`__pycache__`) sem erro de permissão.
                    ├──► Postgres: status = 'failed', salva log de erro
                    └──► self.retry() com backoff (espera N segundos)
                           └──► Volta para a fila do Redis (até max_retries)
+```
 
 *Nota: Fluxo end-to-end testado com sucesso. A API respondeu o POST imediatamente com o `task_id` e o polling no banco (GET /task/{id}) confirmou a atualização de status feita de forma assíncrona pelo worker, na casa dos milissegundos.*
 
