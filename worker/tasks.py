@@ -5,6 +5,8 @@ import psycopg
 
 from .celery_app import celery_app
 from .config import settings
+from .graph import graph
+from shared.schemas import AgentState
 
 logger = logging.getLogger(__name__)
 
@@ -20,7 +22,25 @@ def run_agent(self, task_id: str, task_input: dict):
     conn.commit()
 
   try:
-    output = {"answer": "worker reached — graph not implemented yet"}
+    initial_state: AgentState = {
+      "task_id": task_id,
+      "original_prompt": task_input.get("prompt"),
+      "router_decision": None,
+      "research_output": None,
+      "critique_output": None,
+      "final_output": None,
+      "memory_context": None,
+      "iterations": 0,
+      "error": None
+    }
+
+    final_state = graph.invoke(initial_state)
+
+    output = {
+      "answer": final_state.get("final_output"),
+      "iterations": final_state.get("iterations"),
+      "decision": final_state.get("router_decision")
+    }
 
     with psycopg.connect(conn_str) as conn:
       conn.execute(
