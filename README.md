@@ -18,7 +18,7 @@ Built as a portfolio showcase for **AI Infrastructure / ML Engineer** roles, wit
 
 ## Architecture
 
-```
+```text
 Client
   │
   │  POST /task  →  returns task_id immediately (202)
@@ -97,7 +97,7 @@ Models in use:
 
 ## Repository Structure
 
-```
+```text
 agent-infra-stack/
 ├── docker-compose.yml        # Postgres, Redis, Qdrant, Langfuse, API, Worker
 ├── shared/                   # Pydantic schemas shared between API and Worker
@@ -127,6 +127,7 @@ See [`docs/roadmap.md`](docs/roadmap.md)
 | Doc | Content |
 |---|---|
 | [`docs/roadmap.md`](docs/roadmap.md) | Build plan and progress |
+| [`docs/production-strategy.md`](docs/production-strategy.md) | Cloud-native design, scalability and resilience architecture |
 | [`docs/architecture-decisions.md`](docs/architecture-decisions.md) | Why each tech was chosen |
 | [`docs/hardware-challenges.md`](docs/hardware-challenges.md) | AMD iGPU + Vulkan setup journey |
 | [`docs/benchmarks.md`](docs/benchmarks.md) | Real numbers — tokens/sec, latency per node |

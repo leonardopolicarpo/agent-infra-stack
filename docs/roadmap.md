@@ -91,6 +91,7 @@ External capabilities for the agent.
 Real numbers and written decisions.
 
 - [ ] `docs/architecture-decisions.md` — full ADR writeup
+- [x] `docs/production-strategy.md` — Cloud-native design, scalability and resilience architecture
 - [ ] `docs/hardware-challenges.md` — AMD Vega 7 + Vulkan journey
 - [ ] `docs/benchmarks.md` — tokens/sec, latency per node, model comparison
 - [ ] How-to-run section in README
