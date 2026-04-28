@@ -2,15 +2,13 @@ import logging
 from langgraph.graph import StateGraph, END
 from shared.schemas import AgentState
 
+from .agents.router import router_node
+
 logger = logging.getLogger(__name__)
 
 # ==========================================
 # 1. Node Stubs
 # ==========================================
-
-def router_node(state: AgentState) -> dict:
-  logger.info(f"[NODE] Router executando para task: {state['task_id']}")
-  return {"router_decision": "complex"}
 
 def research_node(state: AgentState) -> dict:
   logger.info(f"[NODE] Research executando (iteração {state['iterations']})")

@@ -11,6 +11,7 @@ dependencies = [
     { name = "celery", extra = ["redis"] },
     { name = "fastapi" },
     { name = "httpx" },
+    { name = "langchain-ollama" },
     { name = "langgraph" },
     { name = "psycopg", extra = ["binary"] },
     { name = "pydantic" },
@@ -24,6 +25,7 @@ requires-dist = [
     { name = "celery", extras = ["redis"], specifier = ">=5.6.3" },
     { name = "fastapi", specifier = ">=0.136.1" },
     { name = "httpx", specifier = ">=0.28.1" },
+    { name = "langchain-ollama", specifier = ">=1.1.0" },
     { name = "langgraph", specifier = ">=1.1.10" },
     { name = "psycopg", extras = ["binary"], specifier = ">=3.3.3" },
     { name = "pydantic", specifier = ">=2.13.3" },
@@ -486,6 +488,19 @@ wheels = [
 ]
 
 [[package]]
+name = "langchain-ollama"
+version = "1.1.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "langchain-core" },
+    { name = "ollama" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/d4/9b/6641afe8a5bf807e454fd464eddfc7eb2f2df53cb0b29744381171f9c609/langchain_ollama-1.1.0.tar.gz", hash = "sha256:f776f56f6782ae4da7692579b94a6575906118318d1023b455d7207f9d059811", size = 133075, upload-time = "2026-04-07T02:48:00.873Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/2c/b2/c2acb076590a98bee2816ed5f285e00df162a34238f9e276e175e14ebc35/langchain_ollama-1.1.0-py3-none-any.whl", hash = "sha256:43ac83a6eacb0f43855810739794dd55019e0d9b17bdcf3ecb3b1991ac3b59dd", size = 31413, upload-time = "2026-04-07T02:47:59.642Z" },
+]
+
+[[package]]
 name = "langchain-protocol"
 version = "0.0.12"
 source = { registry = "https://pypi.org/simple" }
@@ -571,6 +586,19 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/e4/38/092f99a3326f0f6bb6ea62f388b16611d9cb619869ed7b0f3dae6c21c331/langsmith-0.7.37.tar.gz", hash = "sha256:e15ab27f5febbcfbaec4e6fa74ab71f0284f4c5965249cc732fe9344844290cb", size = 4433170, upload-time = "2026-04-26T21:36:41.314Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/c6/76/fa99559d23ec9a39e1153f317a5ec99e7b967aec08b5faac04f8da603dd3/langsmith-0.7.37-py3-none-any.whl", hash = "sha256:64fc5fbf223fcdcc6ee44b08a5df4b2ab8a55e4d968e850c86b6b69fe0c258e3", size = 385948, upload-time = "2026-04-26T21:36:39.09Z" },
+]
+
+[[package]]
+name = "ollama"
+version = "0.6.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "httpx" },
+    { name = "pydantic" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/9d/5a/652dac4b7affc2b37b95386f8ae78f22808af09d720689e3d7a86b6ed98e/ollama-0.6.1.tar.gz", hash = "sha256:478c67546836430034b415ed64fa890fd3d1ff91781a9d548b3325274e69d7c6", size = 51620, upload-time = "2025-11-13T23:02:17.416Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/47/4f/4a617ee93d8208d2bcf26b2d8b9402ceaed03e3853c754940e2290fed063/ollama-0.6.1-py3-none-any.whl", hash = "sha256:fc4c984b345735c5486faeee67d8a265214a31cbb828167782dc642ce0a2bf8c", size = 14354, upload-time = "2025-11-13T23:02:16.292Z" },
 ]
 
 [[package]]

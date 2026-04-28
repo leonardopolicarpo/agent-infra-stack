@@ -40,11 +40,11 @@ Celery worker and LangGraph graph skeleton.
 
 ---
 
-## Phase 4 — Agent Nodes
+## Phase 4 — Agent Nodes `[in progress]`
 
 Individual nodes of the graph.
 
-- [ ] `router` — classify task as simple/complex using lightweight model
+- [x] `router` — classify task as simple/complex using lightweight model
 - [ ] `research` — generate response, model selected by router decision
 - [ ] `critique` — approve or request revision
 - [ ] `output` — format final response
