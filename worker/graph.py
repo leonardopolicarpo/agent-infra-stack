@@ -3,19 +3,13 @@ from langgraph.graph import StateGraph, END
 from shared.schemas import AgentState
 
 from .agents.router import router_node
+from .agents.research import research_node
 
 logger = logging.getLogger(__name__)
 
 # ==========================================
 # 1. Node Stubs
 # ==========================================
-
-def research_node(state: AgentState) -> dict:
-  logger.info(f"[NODE] Research executando (iteração {state['iterations']})")
-  return {
-    "research_output": f"Mocked research for: {state['original_prompt']}",
-    "iterations": state["iterations"] + 1
-  }
 
 def critique_node(state: AgentState) -> dict:
   logger.info("[NODE] Critique avaliando o research")

@@ -45,7 +45,7 @@ Celery worker and LangGraph graph skeleton.
 Individual nodes of the graph.
 
 - [x] `router` — classify task as simple/complex using lightweight model
-- [ ] `research` — generate response, model selected by router decision
+- [x] `research` — generate response, model selected by router decision
 - [ ] `critique` — approve or request revision
 - [ ] `output` — format final response
 - [ ] Loop logic: iterate until APPROVED or max iterations reached
