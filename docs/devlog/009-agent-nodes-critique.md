@@ -77,7 +77,17 @@ Com `TASK_MODEL` apontando pra um 7b ou 8b quantizado:
 - Tempo por iteração aumenta, mas iterações totais caem
 - Tradeoff documentado nos benchmarks quando disponível
 
+## Output Node
+
+Último nó da Phase 4 — sem LLM, sem complexidade.
+
+Recebe o `research_output` aprovado pelo critique e entrega limpo.
+Os prefixos de debug (`FINAL ANSWER:`, `(Approved)`) foram removidos,
+eram úteis com stubs, mas poluem a resposta real.
+
+Decisão consciente de não chamar o modelo aqui: o research gerou,
+o critique aprovou, o output só formata. Custo zero, latência zero.
+
 ## Próximo passo
 
-- `worker/agents/output.py` — último nó da fase 4
 - Após output: fase 5 — memória (short-term + long-term)
