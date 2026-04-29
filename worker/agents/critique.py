@@ -48,3 +48,11 @@ def critique_node(state: AgentState) -> dict:
 
   logger.info("[CRITIQUE] result=%s task=%s", critique[:50], state["task_id"])
   return {"critique_output": critique}
+
+def route_after_critique(state: AgentState) -> str:
+  if state["critique_output"].startswith("APPROVED"):
+    return "output"
+  if state["iterations"] >= 3:
+    logger.warning("[ROUTING] Max iterations reached, forcing output. task=%s", state["task_id"])
+    return "output"
+  return "research"
