@@ -36,6 +36,3 @@ def build_graph():
   workflow.add_edge("output", END)
 
   return workflow.compile()
-
-# Instância global do grafo para ser importada pelo Celery
-graph = build_graph()

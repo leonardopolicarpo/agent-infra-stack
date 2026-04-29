@@ -5,7 +5,7 @@ import psycopg
 
 from .celery_app import celery_app
 from .config import settings
-from .graph import graph
+from .graph import build_graph
 from shared.schemas import AgentState
 
 logger = logging.getLogger(__name__)
@@ -34,6 +34,7 @@ def run_agent(self, task_id: str, task_input: dict):
       "error": None
     }
 
+    graph = build_graph()
     final_state = graph.invoke(initial_state)
 
     output = {

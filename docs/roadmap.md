@@ -52,7 +52,7 @@ Individual nodes of the graph.
 
 ---
 
-## Phase 5 — Memory Layers
+## Phase 5 — Memory Layers `[in progress]`
 
 Dual-layer memory architecture.
 
