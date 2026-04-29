@@ -40,7 +40,7 @@ Celery worker and LangGraph graph skeleton.
 
 ---
 
-## Phase 4 — Agent Nodes `[in progress]`
+## Phase 4 — Agent Nodes
 
 Individual nodes of the graph.
 
@@ -48,7 +48,7 @@ Individual nodes of the graph.
 - [x] `research` — generate response, model selected by router decision
 - [x] `critique` — approve or request revision
 - [x] `output` — format final response
-- [ ] Loop logic: iterate until APPROVED or max iterations reached
+- [x] Loop logic: iterate until APPROVED or max iterations reached
 
 ---
 
