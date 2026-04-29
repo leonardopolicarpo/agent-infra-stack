@@ -5,21 +5,12 @@ from shared.schemas import AgentState
 from .agents.router import router_node
 from .agents.research import research_node
 from .agents.critique import critique_node
+from .agents.output import output_node
 
 logger = logging.getLogger(__name__)
 
 # ==========================================
-# 1. Node Stubs
-# ==========================================
-
-def output_node(state: AgentState) -> dict:
-  logger.info("[NODE] Output gerando resposta final")
-  return {
-    "final_output": f"FINAL ANSWER: {state['research_output']} (Approved)"
-  }
-
-# ==========================================
-# 2. Arestas Condicionais (Edges)
+# Arestas Condicionais (Edges)
 # ==========================================
 
 def route_after_critique(state: AgentState) -> str:
@@ -33,7 +24,7 @@ def route_after_critique(state: AgentState) -> str:
   return "research"
 
 # ==========================================
-# 3. Compilação do Grafo
+# Compilação do Grafo
 # ==========================================
 
 def build_graph():
