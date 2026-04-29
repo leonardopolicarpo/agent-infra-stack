@@ -46,7 +46,7 @@ Individual nodes of the graph.
 
 - [x] `router` — classify task as simple/complex using lightweight model
 - [x] `research` — generate response, model selected by router decision
-- [ ] `critique` — approve or request revision
+- [x] `critique` — approve or request revision
 - [ ] `output` — format final response
 - [ ] Loop logic: iterate until APPROVED or max iterations reached
 

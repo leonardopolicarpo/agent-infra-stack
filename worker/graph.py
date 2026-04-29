@@ -4,20 +4,13 @@ from shared.schemas import AgentState
 
 from .agents.router import router_node
 from .agents.research import research_node
+from .agents.critique import critique_node
 
 logger = logging.getLogger(__name__)
 
 # ==========================================
 # 1. Node Stubs
 # ==========================================
-
-def critique_node(state: AgentState) -> dict:
-  logger.info("[NODE] Critique avaliando o research")
-  
-  if state["iterations"] >= 2:
-    return {"critique_output": "APPROVED"}
-  else:
-    return {"critique_output": "NEEDS_REVISION"}
 
 def output_node(state: AgentState) -> dict:
   logger.info("[NODE] Output gerando resposta final")
