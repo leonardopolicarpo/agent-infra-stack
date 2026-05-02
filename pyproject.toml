@@ -1,7 +1,7 @@
 [project]
 name = "agent-infra-stack"
-version = "0.1.0"
-description = "Add your description here"
+version = "0.2.0"
+description = "Scalable multi-agent pipeline with persistent memory, async task queue and local LLM inference"
 readme = "README.md"
 requires-python = ">=3.10.13"
 dependencies = [
