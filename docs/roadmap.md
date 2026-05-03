@@ -56,7 +56,7 @@ Individual nodes of the graph.
 
 Dual-layer memory architecture.
 
-- [ ] Short-term: PostgreSQL via LangGraph `PostgresSaver`
+- [x] Short-term: PostgreSQL via LangGraph `PostgresSaver`
   - Per-step checkpoint, agent survives worker crash
 - [ ] Long-term: Qdrant + `nomic-embed-text`
   - `recall_memory` node — semantic search before task starts
